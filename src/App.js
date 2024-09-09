@@ -2,22 +2,22 @@
 import React, { useState } from 'react';
 import './App.css'; // Import your CSS file
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; // Import routing components
-import Intro from './sections/Intro';
-import English from './sections/English';
-import Maths from './sections/Maths';
-import Science from './sections/Science';
-import FinalQuiz from './sections/FinalQuiz';
-import ExtraContent from './sections/ExtraContent'; // Import the new page component
+import Intro from './sections/Intro'; // Import Intro section component
+import English from './sections/English'; // Import English section component
+import Maths from './sections/Maths'; // Import Maths section component
+import Science from './sections/Science'; // Import Science section component
+import FinalQuiz from './sections/FinalQuiz'; // Import Final Quiz section component
+import ExtraContent from './sections/ExtraContent'; // Import Extra Content page component
 
 function App() {
     // State to control the sidebar visibility
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
-    // Function to handle smooth scrolling to sections
+    // Function to handle smooth scrolling to specific sections on the main page
     const scrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
+        const section = document.getElementById(sectionId); // Get the section by ID
         if (section) {
-            section.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll effect
+            section.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the section
         }
         setSidebarOpen(false); // Close the sidebar after clicking
     };
@@ -33,22 +33,25 @@ function App() {
                             <>
                                 {/* Sidebar Toggle Button */}
                                 <button
-                                    className={`toggle-button ${sidebarOpen ? 'open' : ''}`}
-                                    onClick={() => setSidebarOpen(!sidebarOpen)}
+                                    className={`toggle-button ${sidebarOpen ? 'open' : ''}`} // Conditional class for styling the toggle button
+                                    onClick={() => setSidebarOpen(!sidebarOpen)} // Toggle sidebar visibility
                                 >
-                                    {sidebarOpen ? '✖' : '☰'}
+                                    {sidebarOpen ? '✖' : '☰'} {/* Display cross or hamburger icon based on sidebar state */}
                                 </button>
 
                                 {/* Sidebar Navigation */}
                                 <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+                                    {/* Close Button Inside Sidebar */}
                                     <button className="close-button" onClick={() => setSidebarOpen(false)}>
                                         ✖
                                     </button>
+                                    {/* Navigation Buttons with Smooth Scroll Effect */}
                                     <button onClick={() => scrollToSection('intro')}>Intro</button>
                                     <button onClick={() => scrollToSection('english')}>English</button>
                                     <button onClick={() => scrollToSection('maths')}>Maths</button>
                                     <button onClick={() => scrollToSection('science')}>Science</button>
                                     <button onClick={() => scrollToSection('finalquiz')}>Quiz</button>
+                                    {/* Link to Extra Content Page */}
                                     <Link to="/extracontent" className="nav-button" onClick={() => setSidebarOpen(false)}>
                                         Extra Content
                                     </Link>
@@ -56,19 +59,19 @@ function App() {
 
                                 {/* Main Content Sections */}
                                 <section id="intro">
-                                    <Intro />
+                                    <Intro /> {/* Renders the Intro section */}
                                 </section>
                                 <section id="english">
-                                    <English />
+                                    <English /> {/* Renders the English section */}
                                 </section>
                                 <section id="maths">
-                                    <Maths />
+                                    <Maths /> {/* Renders the Maths section */}
                                 </section>
                                 <section id="science">
-                                    <Science />
+                                    <Science /> {/* Renders the Science section */}
                                 </section>
                                 <section id="finalquiz">
-                                    <FinalQuiz />
+                                    <FinalQuiz /> {/* Renders the Final Quiz section */}
                                 </section>
                             </>
                         }

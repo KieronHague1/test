@@ -1,11 +1,11 @@
 // src/sections/SolarSystemGallery.js
 import React, { useState } from 'react';
 
-// Data for the planets in the solar system
+// Data array for planets in the solar system with their details
 const planets = [
     {
         name: 'Mercury',
-        image: '../assets/images/mercury.png', // Update with the correct path to your image
+        image: '../assets/images/mercury.png',
         description: 'Mercury is the closest planet to the Sun and the smallest in the Solar System.',
     },
     {
@@ -46,36 +46,40 @@ const planets = [
 ];
 
 function SolarSystemGallery() {
-    const [currentPlanetIndex, setCurrentPlanetIndex] = useState(0);
+    const [currentPlanetIndex, setCurrentPlanetIndex] = useState(0); // State to track the currently displayed planet
 
-    // Function to handle swiping or clicking to the next and previous planets
+    // Function to navigate to the next planet in the list
     const handleNext = () => {
         setCurrentPlanetIndex((prevIndex) =>
             prevIndex === planets.length - 1 ? 0 : prevIndex + 1
         );
     };
 
+    // Function to navigate to the previous planet in the list
     const handlePrev = () => {
         setCurrentPlanetIndex((prevIndex) =>
             prevIndex === 0 ? planets.length - 1 : prevIndex - 1
         );
     };
 
-    // Touch event handlers for mobile swiping
+    // Variables to track touch coordinates for swipe detection
     let touchStartX = 0;
     let touchEndX = 0;
 
+    // Handle touch start event to get initial touch coordinate
     const handleTouchStart = (e) => {
         touchStartX = e.touches[0].clientX;
     };
 
+    // Update touchEndX as the user moves their finger across the screen
     const handleTouchMove = (e) => {
         touchEndX = e.touches[0].clientX;
     };
 
+    // Handle the end of a touch event to determine swipe direction
     const handleTouchEnd = () => {
-        if (touchStartX - touchEndX > 50) handleNext(); // Swipe left
-        if (touchEndX - touchStartX > 50) handlePrev(); // Swipe right
+        if (touchStartX - touchEndX > 50) handleNext(); // Detect left swipe for next
+        if (touchEndX - touchStartX > 50) handlePrev(); // Detect right swipe for previous
     };
 
     return (
@@ -85,6 +89,7 @@ function SolarSystemGallery() {
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
         >
+            {/* Display the current planet's name, image, and description */}
             <div className="planet-slide">
                 <h3 className="planet-title">{planets[currentPlanetIndex].name}</h3>
                 <img
@@ -96,6 +101,8 @@ function SolarSystemGallery() {
                     {planets[currentPlanetIndex].description}
                 </p>
             </div>
+
+            {/* Navigation buttons for cycling through the planets */}
             <div className="navigation-buttons">
                 <button onClick={handlePrev} className="prev-button">
                     &#10094; {/* Left arrow */}
