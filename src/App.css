@@ -1,562 +1,577 @@
 /* src/App.css */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-/* Root colors based on the provided image */
+/* Importing a playful font for a fun, kid-friendly look */
+
+
+/* Defining theme colours */
 :root {
-  --primary-red: #d9534f;
-  --primary-blue: #336699;
-  --primary-yellow: #ffcc00;
-  --background-color: #fdf6d8;
-  --text-color: #333333;
+    --primary-red: #d9534f; /* Main red colour */
+    --primary-blue: #336699; /* Main blue colour */
+    --primary-yellow: #ffcc00; /* Accent yellow */
+    --background-color: #fdf6d8; /* Light background */
+    --text-color: #333333; /* Standard text colour */
 }
 
-/* Global Styles */
+/* Global styles */
 html {
-  scroll-behavior: smooth;
+    scroll-behaviour: smooth; /* Smooth scrolling for links */
 }
 
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  overflow-x: hidden;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
+/* Main app container */
 .App {
-  max-width: 100vw;
-  width: 100%;
-  padding: 0;
-  text-align: center;
-  overflow-x: hidden;
-  position: relative;
+    max-width: 100vw;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+    position: relative;
 }
 
-/* Section Titles */
+/* Section titles */
 .section-title {
-  font-family: 'Fredoka One', cursive;
-  color: var(--primary-red);
-  font-size: 50px;
-  margin-bottom: 20px;
+    font-family: 'Fredoka One', cursive;
+    color: var(--primary-red);
+    font-size: 50px;
+    margin-bottom: 20px;
 }
 
-/* Intro Section */
+/* Intro section */
 .intro-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0px 20px;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-  padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 100px;
 }
 
 .intro-image {
-  max-width: 80%;
-  height: auto;
-  margin-bottom: 20px;
-  object-fit: contain;
-  z-index: -10;
+    max-width: 80%; /* Responsive scaling */
+    height: auto;
+    margin-bottom: 20px;
+    object-fit: contain;
+    z-index: -10; /* Behind other elements */
 }
 
 .intro-text {
-  max-width: 800px;
+    max-width: 800px;
 }
 
 .intro-text h2 {
-  color: var(--primary-red);
-  margin-bottom: 10px;
+    color: var(--primary-red);
+    margin-bottom: 10px;
 }
 
 .intro-text p {
-  line-height: 1.6;
-  color: var(--primary-blue);;
+    line-height: 1.6; /* Improves readability */
+    color: var(--primary-blue);
 }
 
-/* Section-specific Headings */
+/* Specific section headings */
 #intro h1 {
-  color: var(--primary-red);
-  font-size: 100px;
-  font-family: 'Fredoka One', cursive;
-  margin-bottom: -10%;
+    color: var(--primary-red);
+    font-size: 100px;
+    font-family: 'Fredoka One', cursive;
+    margin-bottom: -10%; /* Slight overlap effect */
 }
 
 #intro h2, #intro p {
-  font-size: 40px;
-  font-family: 'Fredoka One', cursive;
+    font-size: 40px;
+    font-family: 'Fredoka One', cursive;
 }
 
 #maths h1 {
-  color: var(--primary-blue);
+    color: var(--primary-blue);
 }
 
 #science h1 {
-  color: var(--primary-yellow);
+    color: var(--primary-yellow); /* Yellow header for the Science section */
 }
 
 /* Navigation Styles */
 .nav {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: var(--primary-blue);
-  padding: 15px 30px;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  z-index: 1000;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Stays fixed at the top when scrolling */
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--primary-blue); /* Blue background for the nav bar */
+    padding: 15px 30px; /* Spacing inside the nav bar */
+    display: flex;
+    gap: 20px; /* Space between buttons */
+    justify-content: center;
+    z-index: 1000; /* Sits above other elements */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
 .nav button, .nav-button {
-  color: var(--primary-yellow);
-  background: none;
-  border: none;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+    color: var(--primary-yellow); /* Yellow text */
+    background: none; /* Transparent background */
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
 }
 
 .nav button:hover, .nav-button:hover {
-  color: var(--primary-red);
-  background-color: rgba(255, 255, 255, 0.2);
-  text-decoration: none;
+    color: var(--primary-red); /* Changes text to red on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Lightens background on hover */
+    text-decoration: none;
 }
 
 /* Sidebar Styles */
 .sidebar {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 250px;
-  height: 100vh;
-  background: var(--primary-blue);
-  color: white;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  transition: left 0.3s ease;
-  z-index: 2000;
-  overflow: hidden;
+    position: fixed; /* Sidebar remains in a fixed position */
+    top: 0;
+    left: -100%; /* Hidden by default */
+    width: 250px;
+    height: 100vh;
+    background: var(--primary-blue);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between buttons */
+    transition: left 0.3s ease; /* Slide-in effect */
+    z-index: 2000; /* Above main content */
+    overflow: hidden;
 }
 
 .sidebar.open {
-  left: 0;
+    left: 0; /* Slides sidebar into view */
 }
 
 .sidebar button {
-  background: none;
-  border: none;
-  color: var(--primary-yellow);
-  font-size: 18px;
-  text-align: left;
-  padding: 10px 0;
-  cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--primary-yellow);
+    font-size: 18px;
+    text-align: left;
+    padding: 10px 0;
+    cursor: pointer;
 }
 
 /* Toggle Button */
 .toggle-button {
-  display: block;
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  width: 45px;
-  height: 45px;
-  margin: 5px;
-  background: var(--primary-yellow);
-  color: var(--primary-blue);
-  border: none;
-  padding: 10px;
-  font-size: 18px;
-  cursor: pointer;
-  z-index: 3000;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+    display: block;
+    position: fixed; /* Fixed button to toggle the sidebar */
+    top: 10px;
+    left: 10px;
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    background: var(--primary-yellow); /* Yellow background */
+    color: var(--primary-blue); /* Blue text */
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 3000; /* Above all content */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .toggle-button.open {
-  transform: rotate(45deg);
-  background: var(--primary-red);
+    transform: rotate(45deg); /* Rotates when open */
+    background: var(--primary-red); /* Changes colour to red when open */
 }
 
 /* Section Layout */
 .section {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 30px 0px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 200px;
+    display: flex; /* Lays out content in a row */
+    flex-wrap: wrap; /* Allows items to wrap onto new lines */
+    padding: 30px 0; /* Vertical spacing inside the section */
+    width: 100%; /* Takes full width */
+    box-sizing: border-box; /* Includes padding in width calculations */
+    margin-bottom: 200px; /* Adds space below each section */
 }
 
 .section > .box-large,
 .section > .box-small {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-  box-sizing: border-box;
-  background-color: white;
-  margin: 10px;
+    flex: 1; /* Allows boxes to grow and shrink equally */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh; /* Sets minimum height to full viewport */
+    box-sizing: border-box;
+    margin: 10px; /* Space around each box */
 }
 
 /* Large and Small Boxes */
 .box-large {
-  background-color: transparent;
-  border: 4px solid var(--primary-blue);
-  padding: 30px;
-  width: 100%;
+    background-color: white;
+    border: 4px solid var(--primary-blue); /* Blue border for large boxes */
+    padding: 30px;
+    width: 100%;
 }
 
 .box-small {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: transparent;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px; /* Space between inner boxes */
 }
 
 .box-small .box {
-  flex: 1;
-  flex-direction: column;
-  background-color: transparent;
-  border: 4px solid var(--primary-red);
-  color: var(--text-color);
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: auto;
+    flex: 1; /* Each box takes equal space */
+    flex-direction: column;
+    background-color: white;
+    border: 4px solid var(--primary-red); /* Red border for small boxes */
+    color: var(--text-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
 }
 
 .box h3 {
-  font-family: 'Fredoka One', cursive;
-  font-size: 30px;
-  color: var(--text-color);
-  margin: 0 0 10px 0;
+    font-family: 'Fredoka One', cursive; /* Uses a fun, bold font */
+    font-size: 30px;
+    color: var(--text-color);
+    margin: 0 0 10px 0;
 }
 
 .box-small .box:nth-child(2) {
-  border: 4px solid var(--primary-yellow);
+    border: 4px solid var(--primary-yellow); /* Yellow border for the second small box */
 }
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
-  .nav {
-    display: none;
-  }
+    .nav {
+        display: none; /* Hides navigation on smaller screens */
+    }
 
-  .section {
-    flex-direction: column;
-    width: 97%;
-  }
+    .section {
+        flex-direction: column; /* Stacks sections vertically */
+        width: 96%; /* Slightly reduces width for better fit */
+    }
 
-  .section > .box-small .box {
-    flex: none;
-    aspect-ratio: 1 / 1;
-  }
+    .section > .box-small .box {
+        flex: none;
+        aspect-ratio: 1 / 1; /* Keeps boxes square */
+    }
 
-  #intro h1 {
-    font-size: 60px;
-  }
+    #intro h1 {
+        font-size: 60px; /* Smaller heading for mobile */
+    }
 
-  .intro-image {
-    padding-top: 20px;
-    transform: scale(1.3);
-  }
+    .intro-image {
+        padding-top: 20px;
+        transform: scale(1.3); /* Scales up the image slightly */
+    }
 }
 
 /* Quiz Section */
 .quiz-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: center;
-  margin-top: -10%;
-  margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    margin-top: -10%; /* Moves quiz section up slightly */
+    margin-bottom: 10%; /* Adds space below the quiz */
 }
 
 .quiz-box {
-  background-color: var(--primary-blue);
-  color: white;
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 600px;
-  width: 100%;
-  box-sizing: border-box;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+    background-color: var(--primary-blue); /* Blue background for the quiz box */
+    color: white;
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
 }
 
 .question-text {
-  margin: 20px 0;
-  font-size: 18px;
+    margin: 20px 0;
+    font-size: 18px;
 }
 
 .options button {
-  display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  background-color: white;
-  color: var(--primary-blue);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+    display: block;
+    margin: 10px auto; /* centers buttons horizontally */
+    padding: 10px 20px;
+    background-color: white;
+    color: var(--primary-blue);
+    border: none;
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
 .options button:hover {
-  background-color: #d9d9d9;
+    background-color: #d9d9d9; /* Changes to light grey on hover */
 }
 
 .result {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .result button {
-  padding: 10px 20px;
-  background-color: var(--primary-yellow);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    background-color: var(--primary-yellow); /* Yellow background for result button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .result button:hover {
-  background-color: #ffcc00;
+    background-color: #ffcc00; /* Brightens yellow on hover */
 }
 
 /* Solar System Gallery */
 .solar-system-gallery {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  background-color: #f0f8ff;
-  border: 2px solid #336699;
-  border-radius: 10px;
-  text-align: center;
-  max-width: 400px;
-  margin: 0 auto;
-  overflow: hidden;
-  height: 400px;
+    display: flex; /* centers content vertically and horizontally */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Space inside the gallery container */
+    background-color: #f0f8ff; /* Light blue background */
+    border: 2px solid #336699; /* Blue border matching the theme */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+    max-width: 400px; /* Restricts width to prevent overflow */
+    margin: 0 auto; /* centers the gallery */
+    overflow: hidden; /* Prevents content overflow */
+    height: 400px; /* Fixed height which can cause overflow if content is larger */
 }
 
 .planet-slide {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+    position: relative; /* Allows positioning of child elements */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Fills the height of the gallery */
 }
 
 .planet-title {
-  font-family: 'Fredoka One', cursive;
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: var(--primary-blue);
+    font-family: 'Fredoka One', cursive; /* Fun, bold font */
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--primary-blue);
 }
 
 .planet-image {
-  max-width: 100%;
-  max-height: 200px;
-  object-fit: contain;
-  border-radius: 5px;
+    max-width: 100%; /* Ensures image does not exceed container width */
+    max-height: 200px; /* Restricts height, maintaining aspect ratio */
+    object-fit: contain; /* Prevents distortion */
+    border-radius: 5px; /* Rounded image corners */
 }
 
 .planet-description {
-  font-size: 14px;
-  margin-top: 10px;
-  color: var(--text-color);
+    font-size: 14px; /* Small, legible text */
+    margin-top: 10px;
+    color: var(--text-color);
 }
 
 .navigation-buttons {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 10px;
+    display: flex; /* Positions buttons next to each other */
+    justify-content: space-between; /* Aligns buttons to the sides */
+    width: 100%;
+    margin-top: 10px; /* Space above navigation buttons */
 }
 
 .prev-button,
 .next-button {
-  background-color: var(--primary-yellow);
-  border: none;
-  color: var(--primary-blue);
-  font-size: 18px;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+    background-color: var(--primary-yellow); /* Consistent button styling */
+    border: none;
+    color: var(--primary-blue);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px; /* Smooth rounded corners */
+    transition: background-color 0.3s ease; /* Adds a smooth transition effect */
 }
 
 .prev-button:hover,
 .next-button:hover {
-  background-color: var(--primary-red);
+    background-color: var(--primary-red); /* Changes to red on hover */
 }
 
 /* Video Styling */
 .box-video {
-  width: 100%;
-  max-height: 400px;
-  margin: 20px 0;
-  border-radius: 5px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-height: 400px; /* Prevents excessive height, keeping it balanced */
+    margin: 20px 0; /* Adds spacing around the video */
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 /* Word of the Day Flip Card */
 .flip-card {
-  background-color: transparent;
-  width: 200px;
-  height: 100px;
-  perspective: 1000px;
-  cursor: pointer;
-  margin: 20px auto;
+    background-color: transparent; /* No background to highlight content */
+    width: 200px; /* Compact card width */
+    height: 100px; /* Short height, keeps it concise */
+    perspective: 1000px; /* Creates a 3D effect */
+    cursor: pointer; /* Indicates interactivity */
+    margin: 20px auto; /* centers the card */
 }
 
 .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s; /* Smooth flip animation */
+    transform-style: preserve-3d;
 }
 
 .flip-card.flipped .flip-card-inner {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Rotates the card when flipped */
 }
 
 .flip-card-front,
 .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--primary-blue);
-  border-radius: 10px;
-  padding: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back when the front is visible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--primary-blue); /* Matches theme colours */
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .flip-card-front {
-  background-color: var(--primary-yellow);
-  color: var(--primary-blue);
+    background-color: var(--primary-yellow); /* Front of the card */
+    color: var(--primary-blue);
 }
 
 .flip-card-back {
-  background-color: #f0f8ff;
-  color: var(--text-color);
-  transform: rotateY(180deg);
+    background-color: #f0f8ff; /* Back of the card */
+    color: var(--text-color);
+    transform: rotateY(180deg); /* Flips content for the back view */
 }
 
 .flip-card-word {
-  font-family: 'Fredoka One', cursive;
-  font-size: 18px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 18px;
 }
 
 .flip-card-definition {
-  font-size: 14px;
-  line-height: 1.4;
+    font-size: 14px;
+    line-height: 1.4;
 }
 
 /* Math Puzzle Game */
 .math-puzzle-game {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 2px solid #336699;
-  border-radius: 10px;
-  text-align: center;
-  margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light grey background for contrast */
+    border: 2px solid #336699; /* Consistent border style */
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px; /* Adds slight separation from other elements */
 }
 
+/* Game Title */
 .game-title {
-  font-family: 'Fredoka One', cursive;
-  color: var(--primary-blue);
-  margin-bottom: 20px;
+    font-family: 'Fredoka One', cursive; /* Fun, engaging font */
+    color: var(--primary-blue); /* Blue text matching the theme */
+    margin-bottom: 20px; /* Adds space below the title */
 }
 
+/* Puzzle Question */
 .puzzle-question {
-  font-size: 18px;
-  color: var(--text-color);
-  margin-bottom: 10px;
+    font-size: 18px; /* Readable font size */
+    color: var(--text-color); /* Standard text colour */
+    margin-bottom: 10px; /* Space below the question */
 }
 
+/* Answer Input Field */
 .answer-input {
-  padding: 10px;
-  font-size: 16px;
-  border: 2px solid #336699;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  text-align: center;
-  width: 80px;
+    padding: 10px; /* Adds space inside the input box */
+    font-size: 16px; /* Slightly smaller font size for inputs */
+    border: 2px solid #336699; /* Blue border matching the theme */
+    border-radius: 5px; /* Smooth rounded edges */
+    margin-bottom: 10px; /* Adds space below the input */
+    text-align: center; /* centers the text inside the input */
+    width: 80px; /* Fixed width, could cause layout issues on narrow screens */
 }
 
+/* Buttons for Submitting Answers and Moving to Next Puzzle */
 .submit-button,
 .next-puzzle-button {
-  padding: 10px 20px;
-  margin-top: 10px;
-  background-color: var(--primary-yellow);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    padding: 10px 20px; /* Comfortable button padding */
+    margin-top: 10px; /* Space above the button */
+    background-color: var(--primary-yellow); /* Bright yellow background */
+    border: none; /* No border */
+    border-radius: 5px; /* Smooth rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth colour transition */
 }
 
 .submit-button:hover,
 .next-puzzle-button:hover {
-  background-color: var(--primary-red);
+    background-color: var(--primary-red); /* Changes to red on hover */
 }
 
+/* Feedback Messages */
 .correct-message {
-  color: #388e3c;
-  font-weight: bold;
+    color: #388e3c; /* Green for correct answers */
+    font-weight: bold; /* Bold text for emphasis */
 }
 
 .incorrect-message {
-  color: #d32f2f;
-  font-weight: bold;
+    color: #d32f2f; /* Red for incorrect answers */
+    font-weight: bold;
 }
 
 /* Extra Content Section */
 .extra-content {
-  padding: 10%;
+    padding: 10%; /* Generous padding, could be excessive on smaller screens */
 }
 
+/* Video Section Layout */
+.video-section {
+    margin-top: 20px; /* Space above the section */
+    padding: 15px; /* Adds space inside the section */
+    background-color: #ffffff; /* White background for contrast */
+    border: 2px solid #d9534f; /* Red border to highlight the section */
+}
+
+/* Text Section Layout */
 .text-section {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #ffffff;
-  border: 2px solid #d9534f;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 2px solid #d9534f;
 }
 
+/* Images within the Content Section */
 .content-image {
-  max-width: 30%;
-  height: auto;
-  margin: 10px 0;
+    max-width: 30%; /* Limits image size, maintaining aspect ratio */
+    height: auto; /* Auto-adjusts height based on width */
+    margin: 10px 0; /* Adds space around the images */
 }
-

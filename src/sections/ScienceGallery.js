@@ -5,42 +5,42 @@ import React, { useState } from 'react';
 const planets = [
     {
         name: 'Mercury',
-        image: '../assets/images/mercury.png',
+        image: require('../assets/images_compressed/planets/mercury.jpg'),
         description: 'Mercury is the closest planet to the Sun and the smallest in the Solar System.',
     },
     {
         name: 'Venus',
-        image: '../assets/images/venus.png',
+        image: require('../assets/images_compressed/planets/venus.jpg'),
         description: 'Venus has a thick atmosphere that traps heat, making it the hottest planet in our solar system.',
     },
     {
         name: 'Earth',
-        image: '../assets/images/earth.png',
+        image: require('../assets/images_compressed/planets/earth.jpg'),
         description: 'Earth is the third planet from the Sun and the only astronomical object known to harbor life.',
     },
     {
         name: 'Mars',
-        image: '../assets/images/mars.png',
+        image: require('../assets/images_compressed/planets/mars.jpg'),
         description: 'Mars is known as the Red Planet because of its reddish appearance due to iron oxide on its surface.',
     },
     {
         name: 'Jupiter',
-        image: '../assets/images/jupiter.png',
+        image: require('../assets/images_compressed/planets/jupiter.jpg'),
         description: 'Jupiter is the largest planet in the solar system and has a giant storm called the Great Red Spot.',
     },
     {
         name: 'Saturn',
-        image: '../assets/images/saturn.png',
+        image: require('../assets/images_compressed/planets/saturn.jpg'),
         description: 'Saturn is known for its extensive ring system, made mostly of ice particles and rocky debris.',
     },
     {
         name: 'Uranus',
-        image: '../assets/images/uranus.png',
+        image: require('../assets/images_compressed/planets/uranus.jpg'),
         description: 'Uranus is an ice giant with a unique tilt that makes it rotate on its side.',
     },
     {
         name: 'Neptune',
-        image: '../assets/images/neptune.png',
+        image: require('../assets/images_compressed/planets/neptune.jpg'),
         description: 'Neptune is the farthest planet from the Sun and is known for its deep blue color and strong winds.',
     },
 ];

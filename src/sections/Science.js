@@ -1,7 +1,7 @@
 // src/sections/Science.js
 import React from 'react';
 import ScienceGallery from "./ScienceGallery"; // Import the ScienceGallery component for displaying science-related content
-import scienceVideo from "../assets/videos/microscope.mp4"; // Import the science-related video
+import scienceVideo from "../assets/videos_compressed/microscope.mp4"; // Import the science-related video
 
 function Science() {
     return (
@@ -19,13 +19,8 @@ function Science() {
                     </p>
 
                     {/* Video Element to Display the Science Video */}
-                    <video
-                        className="box-video"
-                        controls
-                        width="100%"
-                    >
+                    <video className="box-video" controls>
                         <source src={scienceVideo} type="video/mp4" />
-                        Your browser does not support the video tag.
                     </video>
 
                     <h3>Why Learning Science is Fun and Important</h3>

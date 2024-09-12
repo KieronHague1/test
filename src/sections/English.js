@@ -1,6 +1,6 @@
 // src/sections/English.js
 import React from 'react'; // Import the React library
-import englishVideo from '../assets/videos/library.mp4'; // Import the video file
+import englishVideo from '../assets/videos_compressed/library.mp4'; // Import the video file
 import EnglishWord from './EnglishWord'; // Import the EnglishWord component
 
 function English() {
@@ -22,14 +22,8 @@ function English() {
                     </p>
 
                     {/* Video element to display the English video */}
-                    <video
-                        className="box-video"
-                        controls
-                        width="100%"
-                        height="auto"
-                    >
+                    <video className="box-video" controls>
                         <source src={englishVideo} type="video/mp4"/>
-                        Your browser does not support the video tag.
                     </video>
 
                     {/* Additional information and motivation for learning English */}

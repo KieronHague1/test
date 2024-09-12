@@ -1,6 +1,6 @@
 // src/sections/Intro.js
 import React from 'react';
-import introImage from '../assets/images/mainlogo.png'; // Import the image for the intro section
+import introImage from '../assets/images_compressed/mainlogo.jpg'; // Import the image for the intro section
 
 function Intro() {
     return (
