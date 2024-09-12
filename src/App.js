@@ -1,7 +1,7 @@
 // src/App.js
 import React, { useState } from 'react';
 import './App.css'; // Import your CSS file
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; // Import routing components
+import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom'; // Import routing components
 import Intro from './sections/Intro'; // Import Intro section component
 import English from './sections/English'; // Import English section component
 import Maths from './sections/Maths'; // Import Maths section component
